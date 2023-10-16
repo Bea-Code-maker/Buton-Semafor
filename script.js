@@ -1,6 +1,6 @@
 const semafor = document.getElementById("semafor");
 let culoare = 0;
-semafor.addEventListener("click",function(){
+function schimbaCuloarea() {
     if(culoare === 0) {
         semafor.className ="btn btn-warning";
         semafor.innerText = "Galben";
@@ -14,4 +14,6 @@ semafor.addEventListener("click",function(){
         semafor.innerText = "Rosu";
         culoare = 0;
     }
-});
+}
+semafor.addEventListener("click",schimbaCuloarea);
+setInterval(schimbaCuloarea, 10000);
